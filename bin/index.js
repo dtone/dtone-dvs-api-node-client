@@ -16,6 +16,6 @@ dvsApi.init('92a3af1a-51db-5708-a43d-5103a8505dc2', '8d609310-4382-5258-988b-317
 // .catch((err) => console.log(err));
 // console.log(dvsApi.discovery.services.getServiceById({id: 1}));
 
-dvsApi.discovery.countries.getCountries({page:3})
+dvsApi.discovery.countries.getCountries({ page: 3 })
 .then((result) => console.log(result))
 .catch((err) => console.log(err));
