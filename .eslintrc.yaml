@@ -1,0 +1,67 @@
+extends:
+  - 'standard'
+  - 'plugin:import/errors'
+  - 'plugin:import/warnings'
+  - 'plugin:node/recommended'
+  - 'plugin:promise/recommended'
+parserOptions:
+  sourceType: "script"
+  ecmaVersion: 2020
+env:
+  node: true
+  mocha: true
+  es6: true
+plugins:
+  - 'filenames'
+  - 'import'
+  - 'node'
+  - 'promise'
+rules:
+  arrow-parens:
+    - 2
+    - 'always'
+  filenames/match-regex:
+    - 2
+    - '^[a-z0-9_]+$'
+    - true
+  func-names:
+    - 2
+    - 'always'
+  import/no-extraneous-dependencies: 2
+  indent:
+    - 2
+    - 2
+    - MemberExpression: 0
+  max-len:
+    - 2
+    - code: 80
+      ignoreUrls: true
+      ignoreStrings : true
+      ignoreTemplateLiterals: true
+      ignoreRegExpLiterals: true
+  multiline-ternary:
+    - 2
+    - 'always-multiline'
+  no-console: 2
+  no-inline-comments: 2
+  no-return-await: 2
+  no-sync:
+    - 2
+    - allowAtRootLevel: true
+  no-var: 2
+  one-var:
+    - 2
+    - var: 'always'
+      let: 'always'
+      const: 'consecutive'
+  operator-linebreak:
+    - 2
+    - 'before'
+  prefer-arrow-callback: 2
+  prefer-const: 0
+  semi:
+    - 2
+    - 'always'
+  strict:
+    - 2
+    - 'global'
