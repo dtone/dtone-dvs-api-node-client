@@ -20,6 +20,10 @@
   ],
   "author": "DT One",
   "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "joi": "^17.3.0"
+  },
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-standard": "^16.0.0",
@@ -30,9 +34,5 @@
     "eslint-plugin-standard": "^4.0.2",
     "mocha": "^8.2.0",
     "should": "^13.2.3"
-  },
-  "dependencies": {
-    "axios": "^0.21.0",
-    "joi": "^17.3.0"
   }
 }
