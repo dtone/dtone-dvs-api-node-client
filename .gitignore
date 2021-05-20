@@ -85,13 +85,8 @@ typings/
 # Serverless directories
 .serverless
 
-# Config folder
-config/
-!config/example.json
-!config/index.js
-!config/auto_test.js
-
 # vscode Worksspace
-dtshop-api-ws.code-workspace
 .vscode
 .prettierrc.json
+
+debug/
