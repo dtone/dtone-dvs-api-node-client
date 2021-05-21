@@ -33,7 +33,6 @@
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "mocha": "^8.4.0",
-    "should": "^13.2.3"
+    "mocha": "^8.4.0"
   }
 }
