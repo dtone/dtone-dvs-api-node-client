@@ -51,7 +51,7 @@ describe('lib/dvs', () => {
       Assert.equal(
         typeof dvs[item],
         'object',
-        `Expected ${item} to be a object`
+        `Expected "${item}" to be a object`
       );
     });
   });
