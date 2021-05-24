@@ -44,7 +44,9 @@ describe('lib/dvs', () => {
       }),
 
       requiredFunctions = [
-        'discovery'
+        'account',
+        'discovery',
+        'lookup'
       ];
 
     requiredFunctions.forEach((item) => {
