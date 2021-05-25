@@ -47,7 +47,7 @@ Refer DVS API ([here][apidocs]) for full list of query params and data required.
 **Note:** DVS API uses snakecase for query params and data keys. This library
 accepts camelCased keys and converts them to snakecase before calling the API.
 
-### Initialization
+### DVS
 ```javascript
 const dvs = new DVS(opts);
 ```
@@ -70,13 +70,9 @@ const dvs = new DVS(opts);
 }
 ```
 
-### Instance
+### Balances
 
-#### Account
-
-##### Balances
-
-###### Get Balances
+#### Get Balances
 ```javascript
 const it = dvs.account.balances.get({ params: { unit: 'USD' }});
 
