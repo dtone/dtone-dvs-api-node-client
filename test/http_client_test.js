@@ -239,6 +239,20 @@ describe('HTTPClient - lib/http_client', () => {
         Assert.equal(err.data.errors[0].message, 'test');
         return true;
       });
+
+      Nock(baseUrl)
+      .get('/test')
+      .reply(500);
+
+      await Assert.rejects(() => {
+        return httpClient.get({
+          url: '/test'
+        });
+      }, (err) => {
+        Assert.equal(err.name, 'DVSAPIError');
+        Assert.equal(err.status, 500);
+        return true;
+      });
     });
 
     it('should handle timeout', async () => {
@@ -420,6 +434,128 @@ describe('HTTPClient - lib/http_client', () => {
       Assert.equal(result.metaData.rateLimitRemaining, 19);
       Assert.equal(result.metaData.total, 100);
       Assert.equal(result.metaData.totalPages, 10);
+    });
+
+    it('should parse api error repsonse', async () => {
+      const baseUrl = 'https://example.com',
+        httpClient = new HTTPClient({
+          baseUrl,
+          apiKey: 'test',
+          apiSecret: 'test',
+          apiTimeout: 5000
+        }),
+        body = {
+          errors: [{
+            code: 1,
+            message: 'test'
+          }]
+        },
+        headers = {
+          date: new Date().toISOString()
+        };
+
+      Nock(baseUrl)
+      .post('/test')
+      .reply(400, body, headers);
+
+      await Assert.rejects(() => {
+        return httpClient.post({
+          url: '/test'
+        });
+      }, (err) => {
+        Assert.equal(err.name, 'DVSAPIError');
+        Assert.equal(err.status, 400);
+        Assert.equal(err.data.errors[0].code, 1);
+        Assert.equal(err.data.errors[0].message, 'test');
+        return true;
+      });
+
+      Nock(baseUrl)
+      .post('/test')
+      .reply(401, body, headers);
+
+      await Assert.rejects(() => {
+        return httpClient.post({
+          url: '/test'
+        });
+      }, (err) => {
+        Assert.equal(err.name, 'DVSAPIError');
+        Assert.equal(err.status, 401);
+        Assert.equal(err.data.errors[0].code, 1);
+        Assert.equal(err.data.errors[0].message, 'test');
+        return true;
+      });
+
+      Nock(baseUrl)
+      .post('/test')
+      .reply(404, body, headers);
+
+      await Assert.rejects(() => {
+        return httpClient.post({
+          url: '/test'
+        });
+      }, (err) => {
+        Assert.equal(err.name, 'DVSAPIError');
+        Assert.equal(err.status, 404);
+        Assert.equal(err.data.errors[0].code, 1);
+        Assert.equal(err.data.errors[0].message, 'test');
+        return true;
+      });
+
+      Nock(baseUrl)
+      .post('/test')
+      .reply(429, body, headers);
+
+      await Assert.rejects(() => {
+        return httpClient.post({
+          url: '/test'
+        });
+      }, (err) => {
+        Assert.equal(err.name, 'DVSAPIError');
+        Assert.equal(err.status, 429);
+        Assert.equal(err.data.errors[0].code, 1);
+        Assert.equal(err.data.errors[0].message, 'test');
+        return true;
+      });
+
+      Nock(baseUrl)
+      .post('/test')
+      .reply(500);
+
+      await Assert.rejects(() => {
+        return httpClient.post({
+          url: '/test'
+        });
+      }, (err) => {
+        Assert.equal(err.name, 'DVSAPIError');
+        Assert.equal(err.status, 500);
+        return true;
+      });
+    });
+
+    it('should handle timeout', async () => {
+      const baseUrl = 'https://example.com',
+        httpClient = new HTTPClient({
+          baseUrl,
+          apiKey: 'test',
+          apiSecret: 'test',
+          apiTimeout: 1000
+        });
+
+      Nock(baseUrl)
+      .post('/test')
+      .delayConnection(5000)
+      .reply(200);
+
+      await Assert.rejects(() => {
+        return httpClient.post({
+          url: '/test'
+        });
+      }, (err) => {
+        Assert.equal(err.name, 'Error');
+        Assert(err.message.includes('timeout'));
+        return true;
+      });
     });
   });
 });
