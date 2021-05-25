@@ -36,9 +36,24 @@ const dvs = new DVS({
       console.log(JSON.stringify(data));
     }
   } catch (err) {
-    console.log(JSON.stringify(err.data));
+    console.log(JSON.stringify(err));
   }
 })();
+```
+
+### Error handling
+```javascript
+const { DVSAPIError } = require(@dtone/dvs');
+
+try {
+  const result = await dvs.discovery.countries.getByCountryIsoCode({ countryIsoCode: 'SGP' });
+} catch (err) {
+  if (err instanceof DVSAPIError) {
+    console.log(err.status, err.statusText, err.data);
+  }
+
+  // other error like timeouts, network issues, wrong params etc
+}
 ```
 
 ## API
@@ -81,7 +96,9 @@ for await (let data of it) {
 }
 ```
 
-### [Benefits][apidocsbenefits]
+### [Benefits Types][apidocsbenefits]
+
+#### Get Benefit Types
 ```javascript
 const it = dvs.discovery.benefitTypes.get({ params });
 
@@ -90,6 +107,23 @@ for await (let data of it) {
 }
 ```
 
+### [Countries][apidocscountries]
+
+#### Get Countries
+```javascript
+const it = dvs.discovery.countries.get({ params });
+
+for await (let data of it) {
+  console.log(data);
+}
+```
+
+#### Get by Country ISO code
+```javascript
+const result = await dvs.discovery.countries.getByCountryIsoCode({ countryIsoCode: 'SGP' });
+```
+
 [apidocs]: https://dvs-api-doc.dtone.com
 [apidocsbalances]: https://dvs-api-doc.dtone.com/#tag/Balances
 [apidocsbenefits]: https://dvs-api-doc.dtone.com/#tag/Benefits
+[apidocscountries]: https://dvs-api-doc.dtone.com/#tag/Countries
