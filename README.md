@@ -23,7 +23,7 @@ const dvs = new DVS({
 ```
 
 ### Fetching all the pages of an API
-```javascrpt
+```javascript
 (async function () {
   // initial pageing params
   const params = { page: 1, perPage: 10 },
