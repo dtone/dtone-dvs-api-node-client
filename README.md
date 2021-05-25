@@ -22,4 +22,23 @@ const dvs = new DVS({
 });
 ```
 
+### Fetching all the pages of an API
+```javascrpt
+(async function () {
+  // initial pageing params
+  const params = { page: 1, perPage: 10 },
+
+    // initialize the async iterable object
+    it = dvs.discovery.countries.get({ params });
+
+  try {
+    for await (let data of it) {
+      console.log(JSON.stringify(data));
+    }
+  } catch (err) {
+    console.log(JSON.stringify(err.data));
+  }
+})();
+```
+
 [apidocs]: https://dvs-api-doc.dtone.com
