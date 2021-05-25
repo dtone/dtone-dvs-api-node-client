@@ -70,11 +70,20 @@ const dvs = new DVS(opts);
 }
 ```
 
-### Balances
+### [Balances][apidocsbalances]
 
 #### Get Balances
 ```javascript
-const it = dvs.account.balances.get({ params: { unit: 'USD' }});
+const it = dvs.account.balances.get({ params });
+
+for await (let data of it) {
+  console.log(data);
+}
+```
+
+### [Benefits][apidocsbenefits]
+```javascript
+const it = dvs.discovery.benefitTypes.get({ params });
 
 for await (let data of it) {
   console.log(data);
@@ -82,3 +91,5 @@ for await (let data of it) {
 ```
 
 [apidocs]: https://dvs-api-doc.dtone.com
+[apidocsbalances]: https://dvs-api-doc.dtone.com/#tag/Balances
+[apidocsbenefits]: https://dvs-api-doc.dtone.com/#tag/Benefits
