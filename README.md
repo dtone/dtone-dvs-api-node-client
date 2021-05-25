@@ -110,6 +110,12 @@ const dvs = new DVS(opts);
 
 ### Transactions
 * [Get Transactions][apidocsgettransactions] - `dvs.transactions.get({ params }) => Async Iterable`
+* [Get by ID][apidocsgettransactionsbyid] - `dvs.transactions.getByTransactionId({ transactionId}) => Promise`
+* [Create Transaction Async][apidocsasynccreatetransactions] - `dvs.transactions.async.create({ data }) => Promise`
+* [Create Transaction Sync][apidocssynccreatetransactions] - `dvs.transactions.sync.create({ data }) => Promise`
+* [Confirm Transaction Async][apidocsasyncconfirmtransactions] - `dvs.transactions.async.confirm({ transaction_id }) => Promise`
+* [Confirm Transaction Sync][apidocssyncconfirmtransactions] - `dvs.transactions.sync.confirm({ transaction_id }) => Promise`
+* [Cancel Transaction][apidocscanceltransations] - `dvs.transactions.cancel({ transactionId }) => Promise`
 
 ### Balances
 * [Get Balances][apidocsgetbalances] - `dvs.account.balances.get({ params }) => Async Iterable`
@@ -130,6 +136,12 @@ const dvs = new DVS(opts);
 [apidocsgetservices]: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services/get
 [apidocsgetservicesbyid]: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services~1{service_id}/get
 [apidocsgettransactions]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions/get 
+[apidocsgettransactionsbyid]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions~1{transaction_id}/get
+[apidocsasynccreatetransactions]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1async~1transactions/post
+[apidocssynccreatetransactions]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions/post
+[apidocsasyncconfirmtransactions]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1async~1transactions~1{transaction_id}~1confirm/post
+[apidocssyncconfirmtransactions]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions~1{transaction_id}~1confirm/post
+[apidocscanceltransations]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions~1{transaction_id}~1cancel/post
 [apidocsgetbalances]: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get
 [apidocsgetbalances]: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get
 [apidocslookupmobilenumber]: https://dvs-api-doc.dtone.com/#tag/Mobile-Number/paths/~1lookup~1mobile-number~1{mobile_number}/get
