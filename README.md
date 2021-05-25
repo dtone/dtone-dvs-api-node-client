@@ -85,45 +85,18 @@ const dvs = new DVS(opts);
 }
 ```
 
-### [Balances][apidocsbalances]
+### Balances
+* [Get Balances][apidocsgetbalances] - `dvs.account.balances.get({ params }) => Async Iterable`
 
-#### Get Balances
-```javascript
-const it = dvs.account.balances.get({ params });
+### Benefits Types
+* [Get Benefit Types][apidocsgetbalances] - `dvs.discovery.benefitTypes.get({ params }) => Async Iterable`
 
-for await (let data of it) {
-  console.log(data);
-}
-```
-
-### [Benefits Types][apidocsbenefits]
-
-#### Get Benefit Types
-```javascript
-const it = dvs.discovery.benefitTypes.get({ params });
-
-for await (let data of it) {
-  console.log(data);
-}
-```
-
-### [Countries][apidocscountries]
-
-#### Get Countries
-```javascript
-const it = dvs.discovery.countries.get({ params });
-
-for await (let data of it) {
-  console.log(data);
-}
-```
-
-#### Get by Country ISO code
-```javascript
-const result = await dvs.discovery.countries.getByCountryIsoCode({ countryIsoCode: 'SGP' });
-```
+### Countries
+* [Get Countries][apidocsgetcountries] - `dvs.discovery.countries.get({ params }) => Async Iterable`
+* [Get by Country ISO code][apidocsgetcountriesbyisocode] - dvs.discovery.countries.getByCountryIsoCode({ countryIsoCode: 'SGP' }) => Promise`
 
 [apidocs]: https://dvs-api-doc.dtone.com
-[apidocsbalances]: https://dvs-api-doc.dtone.com/#tag/Balances
-[apidocsbenefits]: https://dvs-api-doc.dtone.com/#tag/Benefits
-[apidocscountries]: https://dvs-api-doc.dtone.com/#tag/Countries
+[apidocsgetbalances]: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get
+[apidocsgetbenefits]: https://dvs-api-doc.dtone.com/#tag/Benefits/paths/~1benefit-types/get
+[apidocsgetcountries]: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries/get
+[apidocsgetcountriesbyisocode: ]: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries~1{country_iso_code}/get
