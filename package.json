@@ -1,5 +1,5 @@
 {
-  "name": "@dtone/dvs-api",
+  "name": "@dtone/dvs",
   "version": "0.0.0",
   "description": "DT One DVS SDK for Node.js",
   "main": "lib/dvs.js",
