@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 ## Documentation
-The documnetation for DVS API can be found [here][apidocs]
+The documentation for DVS API can be found [here][apidocs]
 
 ## Install
 ```bash
@@ -39,6 +39,50 @@ const dvs = new DVS({
     console.log(JSON.stringify(err.data));
   }
 })();
+```
+
+## API
+Refer DVS API ([here][apidocs]) for full list of query params and data required.
+
+**Note:** DVS API uses snakecase for query params and data keys. This library
+accepts camelCased keys and converts them to snakecase before calling the API.
+
+### Initialization
+```javascript
+const dvs = new DVS(opts);
+```
+
+#### Options
+```javascript
+{
+  apiKey: 'your-api-key-here', // required
+
+  apiSecret: 'your-api-secret-here', // required
+
+  // sepcifies the number of milliseconds after which the HTTP request times
+  // out. Set 0 to disable timeout.
+  apiTimeout: 60000, // default
+
+  // the base url against which all the api functions are executed, it defaults
+  // to prod env. Change this option to use this library against other
+  // environments.
+  baseUrl: 'https://dvs-api-dtone.com/v1' // default
+}
+```
+
+### Instance
+
+#### Account
+
+##### Balances
+
+###### Get Balances
+```javascript
+const it = dvs.account.balances.get({ params: { unit: 'USD' }});
+
+for await (let data of it) {
+  console.log(data);
+}
 ```
 
 [apidocs]: https://dvs-api-doc.dtone.com
