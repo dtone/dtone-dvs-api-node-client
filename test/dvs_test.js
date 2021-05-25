@@ -7,7 +7,7 @@ const Assert = require('assert').strict,
 
   { DVS } = require('../lib/dvs');
 
-describe('lib/dvs', () => {
+describe('DVS - lib/dvs', () => {
   it('should export DVS class', () => {
     Assert.equal(
       typeof DVS,
@@ -46,7 +46,8 @@ describe('lib/dvs', () => {
       requiredFunctions = [
         'account',
         'discovery',
-        'lookup'
+        'lookup',
+        'transactions'
       ];
 
     requiredFunctions.forEach((item) => {
