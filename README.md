@@ -120,7 +120,7 @@ const dvs = new DVS(opts);
 [apidocs]: https://dvs-api-doc.dtone.com
 [apidocsgetbenefits]: https://dvs-api-doc.dtone.com/#tag/Benefits/paths/~1benefit-types/get
 [apidocsgetcountries]: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries/get
-[apidocsgetcountriesbyisocode: ]: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries~1{country_iso_code}/get
+[apidocsgetcountriesbyisocode]: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries~1{country_iso_code}/get
 [apidocsgetoperators]: https://dvs-api-doc.dtone.com/#tag/Operators/paths/~1operators/get
 [apidocsgetoperatorsbyid]: https://dvs-api-doc.dtone.com/#tag/Operators/paths/~1operators~1{operator_id}/get
 [apidocsgetproducts]: https://dvs-api-doc.dtone.com/#tag/Products/paths/~1products/get
@@ -130,6 +130,6 @@ const dvs = new DVS(opts);
 [apidocsgetservices]: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services/get
 [apidocsgetservicesbyid]: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services~1{service_id}/get
 [apidocsgettransactions]: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions/get 
-[apidocsge[tbalances]: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get
+[apidocsgetbalances]: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get
 [apidocsgetbalances]: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get
 [apidocslookupmobilenumber]: https://dvs-api-doc.dtone.com/#tag/Mobile-Number/paths/~1lookup~1mobile-number~1{mobile_number}/get
