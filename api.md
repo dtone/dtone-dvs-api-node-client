@@ -260,6 +260,66 @@ account.
 
 ### account.balances : [<code>Balances</code>](#Balances)
 **Kind**: instance property of [<code>Account</code>](#Account)  
+<a name="BenefitTypes"></a>
+
+## BenefitTypes
+The BenefitTypes class has all the functions DVS API provides related to
+benefits.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Benefits  
+<a name="BenefitTypes+get"></a>
+
+### benefitTypes.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the benefit types.
+
+**Kind**: instance method of [<code>BenefitTypes</code>](#BenefitTypes)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Benefits/paths/~1benefit-types/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Countries"></a>
+
+## Countries
+The Countries class has all the functions DVS API provides related to
+countries.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Countries  
+
+* [Countries](#Countries)
+    * [.get(options)](#Countries+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByCountryIsoCode(options)](#Countries+getByCountryIsoCode) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Countries+get"></a>
+
+### countries.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the countries.
+
+**Kind**: instance method of [<code>Countries</code>](#Countries)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Countries+getByCountryIsoCode"></a>
+
+### countries.getByCountryIsoCode(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a country by its ISO code.
+
+**Kind**: instance method of [<code>Countries</code>](#Countries)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries~1{country_iso_code}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.countryIsoCode] | <code>string</code> | The country ISO code. |
+
 <a name="Discovery"></a>
 
 ## Discovery
@@ -300,6 +360,162 @@ discovery
 
 ### discovery.services : [<code>Services</code>](#Services)
 **Kind**: instance property of [<code>Discovery</code>](#Discovery)  
+<a name="Operators"></a>
+
+## Operators
+The Operators class has all the functions DVS API provides related to
+operators.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Operators  
+
+* [Operators](#Operators)
+    * [.get(options)](#Operators+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByOperatorId(options)](#Operators+getByOperatorId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Operators+get"></a>
+
+### operators.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the operators.
+
+**Kind**: instance method of [<code>Operators</code>](#Operators)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Operators/paths/~1operators/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Operators+getByOperatorId"></a>
+
+### operators.getByOperatorId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get an operator by its ID.
+
+**Kind**: instance method of [<code>Operators</code>](#Operators)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Operators/paths/~1operators~1{operator_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.operatorId] | <code>number</code> | The operator ID. |
+
+<a name="Products"></a>
+
+## Products
+The Products class has all the functions DVS API provides related to
+products.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Products  
+
+* [Products](#Products)
+    * [.get(options)](#Products+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByProductId(options)](#Products+getByProductId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Products+get"></a>
+
+### products.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the products.
+
+**Kind**: instance method of [<code>Products</code>](#Products)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Products/paths/~1products/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Products+getByProductId"></a>
+
+### products.getByProductId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a product by its ID.
+
+**Kind**: instance method of [<code>Products</code>](#Products)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Products/paths/~1products~1{product_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.productId] | <code>number</code> | The product ID. |
+
+<a name="Promotions"></a>
+
+## Promotions
+The Promotions class has all the functions DVS API provides related to
+promotions.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Promotions  
+
+* [Promotions](#Promotions)
+    * [.get(options)](#Promotions+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByPromotionId(options)](#Promotions+getByPromotionId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Promotions+get"></a>
+
+### promotions.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the promotions.
+
+**Kind**: instance method of [<code>Promotions</code>](#Promotions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Promotions/paths/~1promotions/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Promotions+getByPromotionId"></a>
+
+### promotions.getByPromotionId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a promotion by its ID.
+
+**Kind**: instance method of [<code>Promotions</code>](#Promotions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Promotions/paths/~1promotions~1{promotion_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.operatorId] | <code>number</code> | The promotion ID. |
+
+<a name="Services"></a>
+
+## Services
+The Services class has all the functions DVS API provides related to
+services.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Services  
+
+* [Services](#Services)
+    * [.get(options)](#Services+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByServiceId(options)](#Services+getByServiceId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Services+get"></a>
+
+### services.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the services.
+
+**Kind**: instance method of [<code>Services</code>](#Services)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Services+getByServiceId"></a>
+
+### services.getByServiceId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a service by its ID.
+
+**Kind**: instance method of [<code>Services</code>](#Services)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services~1{service_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.operatorId] | <code>number</code> | The service ID. |
+
 <a name="AsyncIterator<T>"></a>
 
 ## AsyncIterator<T>
