@@ -3,10 +3,6 @@
 <dl>
 <dt><a href="#module_dvs">dvs</a></dt>
 <dd></dd>
-<dt><a href="#module_account">account</a></dt>
-<dd></dd>
-<dt><a href="#module_discovery">discovery</a></dt>
-<dd></dd>
 </dl>
 
 ## Classes
@@ -49,11 +45,17 @@ discovery</p>
 operators.</p>
 </dd>
 <dt><a href="#Products">Products</a></dt>
-<dd></dd>
+<dd><p>The Products class has all the functions DVS API provides related to
+products.</p>
+</dd>
 <dt><a href="#Promotions">Promotions</a></dt>
-<dd></dd>
+<dd><p>The Promotions class has all the functions DVS API provides related to
+promotions.</p>
+</dd>
 <dt><a href="#Services">Services</a></dt>
-<dd></dd>
+<dd><p>The Services class has all the functions DVS API provides related to
+services.</p>
+</dd>
 <dt><a href="#Lookup">Lookup</a></dt>
 <dd></dd>
 <dt><a href="#MobileNumber">MobileNumber</a></dt>
@@ -90,20 +92,6 @@ operators.</p>
 
 ### dvs.DVS : [<code>DVS</code>](#DVS)
 **Kind**: static property of [<code>dvs</code>](#module_dvs)  
-<a name="module_account"></a>
-
-## account
-<a name="module_account.Account"></a>
-
-### account.Account : [<code>Account</code>](#Account)
-**Kind**: static property of [<code>account</code>](#module_account)  
-<a name="module_discovery"></a>
-
-## discovery
-<a name="module_discovery.Discovery"></a>
-
-### discovery.Discovery : [<code>Discovery</code>](#Discovery)
-**Kind**: static property of [<code>discovery</code>](#module_discovery)  
 <a name="DVS"></a>
 
 ## DVS
