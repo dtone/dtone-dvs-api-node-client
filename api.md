@@ -3,6 +3,8 @@
 <dl>
 <dt><a href="#module_account">account</a></dt>
 <dd></dd>
+<dt><a href="#module_discovery">discovery</a></dt>
+<dd></dd>
 <dt><a href="#module_dvs">dvs</a></dt>
 <dd></dd>
 </dl>
@@ -79,6 +81,13 @@ operators.</p>
 
 ### account.Account : [<code>Account</code>](#Account)
 **Kind**: static property of [<code>account</code>](#module_account)  
+<a name="module_discovery"></a>
+
+## discovery
+<a name="module_discovery.Discovery"></a>
+
+### discovery.Discovery : [<code>Discovery</code>](#Discovery)
+**Kind**: static property of [<code>discovery</code>](#module_discovery)  
 <a name="module_dvs"></a>
 
 ## dvs
