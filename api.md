@@ -122,26 +122,26 @@ Create a DVS instance
 
 **Example**  
 ```js
-const dvs = new DVS({
+const dvsClient = new DVS({
   apiKey: 'your-api-key',
   apiSecret: 'your-api-secret'
 });
 ```
 <a name="DVS+account"></a>
 
-### dvs.account : [<code>Account</code>](#Account)
+### dvsClient.account : [<code>Account</code>](#Account)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVS+discovery"></a>
 
-### dvs.discovery : [<code>Discovery</code>](#Discovery)
+### dvsClient.discovery : [<code>Discovery</code>](#Discovery)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVS+lookup"></a>
 
-### dvs.lookup : [<code>Lookup</code>](#Lookup)
+### dvsClient.lookup : [<code>Lookup</code>](#Lookup)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVS+transactions"></a>
 
-### dvs.transactions : [<code>Transactions</code>](#Transactions)
+### dvsClient.transactions : [<code>Transactions</code>](#Transactions)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVSAPIError"></a>
 
@@ -529,7 +529,7 @@ An async iteratable object
 
 **Example**  
 ```js
-const it = dvs.account.balances.get({page: 1, perPage: 10});
+const it = dvsClient.account.balances.get({page: 1, perPage: 10});
 for await(let data of it) {
   console.log(data);
 }
