@@ -57,15 +57,24 @@ promotions.</p>
 services.</p>
 </dd>
 <dt><a href="#Lookup">Lookup</a></dt>
-<dd></dd>
+<dd><p>The Lookup class has all the function DVS API provides related to lookup</p>
+</dd>
 <dt><a href="#MobileNumber">MobileNumber</a></dt>
-<dd></dd>
-<dt><a href="#Async">Async</a></dt>
-<dd></dd>
+<dd><p>The MobileNumber class all the functions DVS API provides related to mobile
+number lookup.</p>
+</dd>
+<dt><a href="#AsyncTransaction">AsyncTransaction</a></dt>
+<dd><p>The AsyncTransaction class has all the functions DVS API provides related to
+async transactions.</p>
+</dd>
 <dt><a href="#Transactions">Transactions</a></dt>
-<dd></dd>
-<dt><a href="#Sync">Sync</a></dt>
-<dd></dd>
+<dd><p>The Transactions class has all the functions DVS API provides related to
+transactions.</p>
+</dd>
+<dt><a href="#SyncTransaction">SyncTransaction</a></dt>
+<dd><p>The SyncTransaction class has all the functions DVS API provides related to
+sync transactions.</p>
+</dd>
 </dl>
 
 ## Typedefs
@@ -515,6 +524,173 @@ Get a service by its ID.
 | --- | --- | --- |
 | options | <code>Object</code> | The parameters to provider the API. |
 | [options.operatorId] | <code>number</code> | The service ID. |
+
+<a name="Lookup"></a>
+
+## Lookup
+The Lookup class has all the function DVS API provides related to lookup
+
+**Kind**: global class  
+<a name="MobileNumber"></a>
+
+## MobileNumber
+The MobileNumber class all the functions DVS API provides related to mobile
+number lookup.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Mobile-Number  
+<a name="MobileNumber+getByMobileNumber"></a>
+
+### mobileNumber.getByMobileNumber(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Lookup by mobile number
+
+**Kind**: instance method of [<code>MobileNumber</code>](#MobileNumber)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Mobile-Number/paths/~1lookup~1mobile-number~1{mobile_number}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.mobileNumber] | <code>string</code> | The mobile number. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="AsyncTransaction"></a>
+
+## AsyncTransaction
+The AsyncTransaction class has all the functions DVS API provides related to
+async transactions.
+
+**Kind**: global class  
+
+* [AsyncTransaction](#AsyncTransaction)
+    * [.create(options)](#AsyncTransaction+create) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.confirm(options)](#AsyncTransaction+confirm) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="AsyncTransaction+create"></a>
+
+### asyncTransaction.create(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Create a transaction asynchronously.
+
+**Kind**: instance method of [<code>AsyncTransaction</code>](#AsyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1async~1transactions/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provide the API. |
+| [options.data] | <code>Object</code> | The request body for the API. |
+
+<a name="AsyncTransaction+confirm"></a>
+
+### asyncTransaction.confirm(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Confirm a transaction asynchronously.
+
+**Kind**: instance method of [<code>AsyncTransaction</code>](#AsyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1async~1transactions~1{transaction_id}~1confirm/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
+
+<a name="Transactions"></a>
+
+## Transactions
+The Transactions class has all the functions DVS API provides related to
+transactions.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions  
+
+* [Transactions](#Transactions)
+    * [.async](#Transactions+async) : [<code>AsyncTransaction</code>](#AsyncTransaction)
+    * [.sync](#Transactions+sync) : [<code>SyncTransaction</code>](#SyncTransaction)
+    * [.get(options)](#Transactions+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByTransactionId(options)](#Transactions+getByTransactionId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.cancel(options)](#Transactions+cancel) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Transactions+async"></a>
+
+### transactions.async : [<code>AsyncTransaction</code>](#AsyncTransaction)
+**Kind**: instance property of [<code>Transactions</code>](#Transactions)  
+<a name="Transactions+sync"></a>
+
+### transactions.sync : [<code>SyncTransaction</code>](#SyncTransaction)
+**Kind**: instance property of [<code>Transactions</code>](#Transactions)  
+<a name="Transactions+get"></a>
+
+### transactions.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the transactions.
+
+**Kind**: instance method of [<code>Transactions</code>](#Transactions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Transactions+getByTransactionId"></a>
+
+### transactions.getByTransactionId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a transaction by ID.
+
+**Kind**: instance method of [<code>Transactions</code>](#Transactions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions~1{transaction_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
+
+<a name="Transactions+cancel"></a>
+
+### transactions.cancel(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Cancel a transaction
+
+**Kind**: instance method of [<code>Transactions</code>](#Transactions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions~1{transaction_id}~1cancel/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
+
+<a name="SyncTransaction"></a>
+
+## SyncTransaction
+The SyncTransaction class has all the functions DVS API provides related to
+sync transactions.
+
+**Kind**: global class  
+
+* [SyncTransaction](#SyncTransaction)
+    * [.create(options)](#SyncTransaction+create) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.confirm(options)](#SyncTransaction+confirm) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="SyncTransaction+create"></a>
+
+### syncTransaction.create(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Create a transaction synchronously.
+
+**Kind**: instance method of [<code>SyncTransaction</code>](#SyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provide the API. |
+| [options.data] | <code>Object</code> | The request body for the API. |
+
+<a name="SyncTransaction+confirm"></a>
+
+### syncTransaction.confirm(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Confirm a transaction synchronously.
+
+**Kind**: instance method of [<code>SyncTransaction</code>](#SyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions~1{transaction_id}~1confirm/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
 
 <a name="AsyncIterator<T>"></a>
 
