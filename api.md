@@ -1,8 +1,6 @@
 ## Modules
 
 <dl>
-<dt><a href="#module_account">account</a></dt>
-<dd></dd>
 <dt><a href="#module_dvs">dvs</a></dt>
 <dd></dd>
 </dl>
@@ -10,6 +8,18 @@
 ## Classes
 
 <dl>
+<dt><a href="#DVS">DVS</a></dt>
+<dd><p>The DVS class provides all the functions to interact with DVS API</p>
+</dd>
+<dt><a href="#DVSAPIError">DVSAPIError</a></dt>
+<dd><p>The DVSAPIError class wraps the error returned by the DVS API</p>
+</dd>
+<dt><a href="#DVSAPIResponseMetaData">DVSAPIResponseMetaData</a></dt>
+<dd><p>The DVS API response meta data</p>
+</dd>
+<dt><a href="#DVSAPIResponse">DVSAPIResponse</a></dt>
+<dd><p>The API repsonse object that is returned on successful API exection.</p>
+</dd>
 <dt><a href="#Balances">Balances</a></dt>
 <dd><p>The Balances class has all the functions DVS API provides related to
 balance.</p>
@@ -35,32 +45,35 @@ discovery</p>
 operators.</p>
 </dd>
 <dt><a href="#Products">Products</a></dt>
-<dd></dd>
+<dd><p>The Products class has all the functions DVS API provides related to
+products.</p>
+</dd>
 <dt><a href="#Promotions">Promotions</a></dt>
-<dd></dd>
+<dd><p>The Promotions class has all the functions DVS API provides related to
+promotions.</p>
+</dd>
 <dt><a href="#Services">Services</a></dt>
-<dd></dd>
+<dd><p>The Services class has all the functions DVS API provides related to
+services.</p>
+</dd>
 <dt><a href="#Lookup">Lookup</a></dt>
-<dd></dd>
+<dd><p>The Lookup class has all the function DVS API provides related to lookup</p>
+</dd>
 <dt><a href="#MobileNumber">MobileNumber</a></dt>
-<dd></dd>
-<dt><a href="#Async">Async</a></dt>
-<dd></dd>
+<dd><p>The MobileNumber class all the functions DVS API provides related to mobile
+number lookup.</p>
+</dd>
+<dt><a href="#AsyncTransaction">AsyncTransaction</a></dt>
+<dd><p>The AsyncTransaction class has all the functions DVS API provides related to
+async transactions.</p>
+</dd>
 <dt><a href="#Transactions">Transactions</a></dt>
-<dd></dd>
-<dt><a href="#Sync">Sync</a></dt>
-<dd></dd>
-<dt><a href="#DVS">DVS</a></dt>
-<dd><p>The DVS class provides all the functions to interact with DVS API</p>
+<dd><p>The Transactions class has all the functions DVS API provides related to
+transactions.</p>
 </dd>
-<dt><a href="#DVSAPIError">DVSAPIError</a></dt>
-<dd><p>The DVSAPIError class wraps the error returned by the DVS API</p>
-</dd>
-<dt><a href="#DVSAPIResponseMetaData">DVSAPIResponseMetaData</a></dt>
-<dd><p>The DVS API response meta data</p>
-</dd>
-<dt><a href="#DVSAPIResponse">DVSAPIResponse</a></dt>
-<dd><p>The API repsonse object that is returned on successful API exection.</p>
+<dt><a href="#SyncTransaction">SyncTransaction</a></dt>
+<dd><p>The SyncTransaction class has all the functions DVS API provides related to
+sync transactions.</p>
 </dd>
 </dl>
 
@@ -72,13 +85,6 @@ operators.</p>
 </dd>
 </dl>
 
-<a name="module_account"></a>
-
-## account
-<a name="module_account.Account"></a>
-
-### account.Account : [<code>Account</code>](#Account)
-**Kind**: static property of [<code>account</code>](#module_account)  
 <a name="module_dvs"></a>
 
 ## dvs
@@ -95,78 +101,6 @@ operators.</p>
 
 ### dvs.DVS : [<code>DVS</code>](#DVS)
 **Kind**: static property of [<code>dvs</code>](#module_dvs)  
-<a name="Balances"></a>
-
-## Balances
-The Balances class has all the functions DVS API provides related to
-balance.
-
-**Kind**: global class  
-**Link**: https://dvs-api-doc.dtone.com/#tag/Balances  
-<a name="Balances+get"></a>
-
-### balances.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
-Get all the balances.
-
-**Kind**: instance method of [<code>Balances</code>](#Balances)  
-**Link**: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| options | <code>Object</code> | The parameters to provider the API. |
-| [options.params] | <code>Object</code> | The query params for the API. |
-
-<a name="Account"></a>
-
-## Account
-The Account class has all the functions DVS API provides related to an
-account.
-
-**Kind**: global class  
-<a name="Account+balances"></a>
-
-### account.balances : [<code>Balances</code>](#Balances)
-**Kind**: instance property of [<code>Account</code>](#Account)  
-<a name="Discovery"></a>
-
-## Discovery
-The Discovery class has all the functions DVS API provides related to
-discovery
-
-**Kind**: global class  
-
-* [Discovery](#Discovery)
-    * [.benefitTypes](#Discovery+benefitTypes) : [<code>BenefitTypes</code>](#BenefitTypes)
-    * [.countries](#Discovery+countries) : [<code>Countries</code>](#Countries)
-    * [.operators](#Discovery+operators) : [<code>Operators</code>](#Operators)
-    * [.products](#Discovery+products) : [<code>Products</code>](#Products)
-    * [.promotions](#Discovery+promotions) : [<code>Promotions</code>](#Promotions)
-    * [.services](#Discovery+services) : [<code>Services</code>](#Services)
-
-<a name="Discovery+benefitTypes"></a>
-
-### discovery.benefitTypes : [<code>BenefitTypes</code>](#BenefitTypes)
-**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
-<a name="Discovery+countries"></a>
-
-### discovery.countries : [<code>Countries</code>](#Countries)
-**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
-<a name="Discovery+operators"></a>
-
-### discovery.operators : [<code>Operators</code>](#Operators)
-**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
-<a name="Discovery+products"></a>
-
-### discovery.products : [<code>Products</code>](#Products)
-**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
-<a name="Discovery+promotions"></a>
-
-### discovery.promotions : [<code>Promotions</code>](#Promotions)
-**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
-<a name="Discovery+services"></a>
-
-### discovery.services : [<code>Services</code>](#Services)
-**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
 <a name="DVS"></a>
 
 ## DVS
@@ -197,26 +131,26 @@ Create a DVS instance
 
 **Example**  
 ```js
-const dvs = new DVS({
+const dvsClient = new DVS({
   apiKey: 'your-api-key',
   apiSecret: 'your-api-secret'
 });
 ```
 <a name="DVS+account"></a>
 
-### dvs.account : [<code>Account</code>](#Account)
+### dvsClient.account : [<code>Account</code>](#Account)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVS+discovery"></a>
 
-### dvs.discovery : [<code>Discovery</code>](#Discovery)
+### dvsClient.discovery : [<code>Discovery</code>](#Discovery)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVS+lookup"></a>
 
-### dvs.lookup : [<code>Lookup</code>](#Lookup)
+### dvsClient.lookup : [<code>Lookup</code>](#Lookup)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVS+transactions"></a>
 
-### dvs.transactions : [<code>Transactions</code>](#Transactions)
+### dvsClient.transactions : [<code>Transactions</code>](#Transactions)
 **Kind**: instance property of [<code>DVS</code>](#DVS)  
 <a name="DVSAPIError"></a>
 
@@ -303,6 +237,461 @@ The API repsonse object that is returned on successful API exection.
 The DVS API response body.
 
 **Kind**: instance property of [<code>DVSAPIResponse</code>](#DVSAPIResponse)  
+<a name="Balances"></a>
+
+## Balances
+The Balances class has all the functions DVS API provides related to
+balance.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Balances  
+<a name="Balances+get"></a>
+
+### balances.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the balances.
+
+**Kind**: instance method of [<code>Balances</code>](#Balances)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Balances/paths/~1balances/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Account"></a>
+
+## Account
+The Account class has all the functions DVS API provides related to an
+account.
+
+**Kind**: global class  
+<a name="Account+balances"></a>
+
+### account.balances : [<code>Balances</code>](#Balances)
+**Kind**: instance property of [<code>Account</code>](#Account)  
+<a name="BenefitTypes"></a>
+
+## BenefitTypes
+The BenefitTypes class has all the functions DVS API provides related to
+benefits.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Benefits  
+<a name="BenefitTypes+get"></a>
+
+### benefitTypes.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the benefit types.
+
+**Kind**: instance method of [<code>BenefitTypes</code>](#BenefitTypes)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Benefits/paths/~1benefit-types/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Countries"></a>
+
+## Countries
+The Countries class has all the functions DVS API provides related to
+countries.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Countries  
+
+* [Countries](#Countries)
+    * [.get(options)](#Countries+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByCountryIsoCode(options)](#Countries+getByCountryIsoCode) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Countries+get"></a>
+
+### countries.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the countries.
+
+**Kind**: instance method of [<code>Countries</code>](#Countries)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Countries+getByCountryIsoCode"></a>
+
+### countries.getByCountryIsoCode(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a country by its ISO code.
+
+**Kind**: instance method of [<code>Countries</code>](#Countries)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Countries/paths/~1countries~1{country_iso_code}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.countryIsoCode] | <code>string</code> | The country ISO code. |
+
+<a name="Discovery"></a>
+
+## Discovery
+The Discovery class has all the functions DVS API provides related to
+discovery
+
+**Kind**: global class  
+
+* [Discovery](#Discovery)
+    * [.benefitTypes](#Discovery+benefitTypes) : [<code>BenefitTypes</code>](#BenefitTypes)
+    * [.countries](#Discovery+countries) : [<code>Countries</code>](#Countries)
+    * [.operators](#Discovery+operators) : [<code>Operators</code>](#Operators)
+    * [.products](#Discovery+products) : [<code>Products</code>](#Products)
+    * [.promotions](#Discovery+promotions) : [<code>Promotions</code>](#Promotions)
+    * [.services](#Discovery+services) : [<code>Services</code>](#Services)
+
+<a name="Discovery+benefitTypes"></a>
+
+### discovery.benefitTypes : [<code>BenefitTypes</code>](#BenefitTypes)
+**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
+<a name="Discovery+countries"></a>
+
+### discovery.countries : [<code>Countries</code>](#Countries)
+**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
+<a name="Discovery+operators"></a>
+
+### discovery.operators : [<code>Operators</code>](#Operators)
+**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
+<a name="Discovery+products"></a>
+
+### discovery.products : [<code>Products</code>](#Products)
+**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
+<a name="Discovery+promotions"></a>
+
+### discovery.promotions : [<code>Promotions</code>](#Promotions)
+**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
+<a name="Discovery+services"></a>
+
+### discovery.services : [<code>Services</code>](#Services)
+**Kind**: instance property of [<code>Discovery</code>](#Discovery)  
+<a name="Operators"></a>
+
+## Operators
+The Operators class has all the functions DVS API provides related to
+operators.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Operators  
+
+* [Operators](#Operators)
+    * [.get(options)](#Operators+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByOperatorId(options)](#Operators+getByOperatorId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Operators+get"></a>
+
+### operators.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the operators.
+
+**Kind**: instance method of [<code>Operators</code>](#Operators)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Operators/paths/~1operators/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Operators+getByOperatorId"></a>
+
+### operators.getByOperatorId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get an operator by its ID.
+
+**Kind**: instance method of [<code>Operators</code>](#Operators)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Operators/paths/~1operators~1{operator_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.operatorId] | <code>number</code> | The operator ID. |
+
+<a name="Products"></a>
+
+## Products
+The Products class has all the functions DVS API provides related to
+products.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Products  
+
+* [Products](#Products)
+    * [.get(options)](#Products+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByProductId(options)](#Products+getByProductId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Products+get"></a>
+
+### products.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the products.
+
+**Kind**: instance method of [<code>Products</code>](#Products)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Products/paths/~1products/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Products+getByProductId"></a>
+
+### products.getByProductId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a product by its ID.
+
+**Kind**: instance method of [<code>Products</code>](#Products)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Products/paths/~1products~1{product_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.productId] | <code>number</code> | The product ID. |
+
+<a name="Promotions"></a>
+
+## Promotions
+The Promotions class has all the functions DVS API provides related to
+promotions.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Promotions  
+
+* [Promotions](#Promotions)
+    * [.get(options)](#Promotions+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByPromotionId(options)](#Promotions+getByPromotionId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Promotions+get"></a>
+
+### promotions.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the promotions.
+
+**Kind**: instance method of [<code>Promotions</code>](#Promotions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Promotions/paths/~1promotions/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Promotions+getByPromotionId"></a>
+
+### promotions.getByPromotionId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a promotion by its ID.
+
+**Kind**: instance method of [<code>Promotions</code>](#Promotions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Promotions/paths/~1promotions~1{promotion_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.operatorId] | <code>number</code> | The promotion ID. |
+
+<a name="Services"></a>
+
+## Services
+The Services class has all the functions DVS API provides related to
+services.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Services  
+
+* [Services](#Services)
+    * [.get(options)](#Services+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByServiceId(options)](#Services+getByServiceId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Services+get"></a>
+
+### services.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the services.
+
+**Kind**: instance method of [<code>Services</code>](#Services)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Services+getByServiceId"></a>
+
+### services.getByServiceId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a service by its ID.
+
+**Kind**: instance method of [<code>Services</code>](#Services)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Services/paths/~1services~1{service_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.operatorId] | <code>number</code> | The service ID. |
+
+<a name="Lookup"></a>
+
+## Lookup
+The Lookup class has all the function DVS API provides related to lookup
+
+**Kind**: global class  
+<a name="MobileNumber"></a>
+
+## MobileNumber
+The MobileNumber class all the functions DVS API provides related to mobile
+number lookup.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Mobile-Number  
+<a name="MobileNumber+getByMobileNumber"></a>
+
+### mobileNumber.getByMobileNumber(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Lookup by mobile number
+
+**Kind**: instance method of [<code>MobileNumber</code>](#MobileNumber)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Mobile-Number/paths/~1lookup~1mobile-number~1{mobile_number}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.mobileNumber] | <code>string</code> | The mobile number. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="AsyncTransaction"></a>
+
+## AsyncTransaction
+The AsyncTransaction class has all the functions DVS API provides related to
+async transactions.
+
+**Kind**: global class  
+
+* [AsyncTransaction](#AsyncTransaction)
+    * [.create(options)](#AsyncTransaction+create) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.confirm(options)](#AsyncTransaction+confirm) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="AsyncTransaction+create"></a>
+
+### asyncTransaction.create(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Create a transaction asynchronously.
+
+**Kind**: instance method of [<code>AsyncTransaction</code>](#AsyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1async~1transactions/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provide the API. |
+| [options.data] | <code>Object</code> | The request body for the API. |
+
+<a name="AsyncTransaction+confirm"></a>
+
+### asyncTransaction.confirm(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Confirm a transaction asynchronously.
+
+**Kind**: instance method of [<code>AsyncTransaction</code>](#AsyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1async~1transactions~1{transaction_id}~1confirm/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
+
+<a name="Transactions"></a>
+
+## Transactions
+The Transactions class has all the functions DVS API provides related to
+transactions.
+
+**Kind**: global class  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions  
+
+* [Transactions](#Transactions)
+    * [.async](#Transactions+async) : [<code>AsyncTransaction</code>](#AsyncTransaction)
+    * [.sync](#Transactions+sync) : [<code>SyncTransaction</code>](#SyncTransaction)
+    * [.get(options)](#Transactions+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.getByTransactionId(options)](#Transactions+getByTransactionId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.cancel(options)](#Transactions+cancel) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="Transactions+async"></a>
+
+### transactions.async : [<code>AsyncTransaction</code>](#AsyncTransaction)
+**Kind**: instance property of [<code>Transactions</code>](#Transactions)  
+<a name="Transactions+sync"></a>
+
+### transactions.sync : [<code>SyncTransaction</code>](#SyncTransaction)
+**Kind**: instance property of [<code>Transactions</code>](#Transactions)  
+<a name="Transactions+get"></a>
+
+### transactions.get(options) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get all the transactions.
+
+**Kind**: instance method of [<code>Transactions</code>](#Transactions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.params] | <code>Object</code> | The query params for the API. |
+
+<a name="Transactions+getByTransactionId"></a>
+
+### transactions.getByTransactionId(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Get a transaction by ID.
+
+**Kind**: instance method of [<code>Transactions</code>](#Transactions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions~1{transaction_id}/get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
+
+<a name="Transactions+cancel"></a>
+
+### transactions.cancel(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Cancel a transaction
+
+**Kind**: instance method of [<code>Transactions</code>](#Transactions)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions~1{transaction_id}~1cancel/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
+
+<a name="SyncTransaction"></a>
+
+## SyncTransaction
+The SyncTransaction class has all the functions DVS API provides related to
+sync transactions.
+
+**Kind**: global class  
+
+* [SyncTransaction](#SyncTransaction)
+    * [.create(options)](#SyncTransaction+create) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+    * [.confirm(options)](#SyncTransaction+confirm) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+
+<a name="SyncTransaction+create"></a>
+
+### syncTransaction.create(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Create a transaction synchronously.
+
+**Kind**: instance method of [<code>SyncTransaction</code>](#SyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provide the API. |
+| [options.data] | <code>Object</code> | The request body for the API. |
+
+<a name="SyncTransaction+confirm"></a>
+
+### syncTransaction.confirm(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
+Confirm a transaction synchronously.
+
+**Kind**: instance method of [<code>SyncTransaction</code>](#SyncTransaction)  
+**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions~1{transaction_id}~1confirm/post  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The parameters to provider the API. |
+| [options.transactionId] | <code>number</code> | The transaction ID. |
+
 <a name="AsyncIterator<T>"></a>
 
 ## AsyncIterator<T>
@@ -316,7 +705,7 @@ An async iteratable object
 
 **Example**  
 ```js
-const it = dvs.account.balances.get({page: 1, perPage: 10});
+const it = dvsClient.account.balances.get({page: 1, perPage: 10});
 for await(let data of it) {
   console.log(data);
 }
