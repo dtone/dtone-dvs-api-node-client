@@ -80,7 +80,7 @@ sync transactions.</p>
 ## Typedefs
 
 <dl>
-<dt><a href="#AsyncIterator<T>">AsyncIterator<T></a></dt>
+<dt><a href="#AsyncIterator`<T>`">AsyncIterator`<T>`</a></dt>
 <dd><p>An async iteratable object</p>
 </dd>
 </dl>
@@ -694,9 +694,9 @@ Confirm a transaction synchronously.
 | options | <code>Object</code> | The parameters to provider the API. |
 | [options.transactionId] | <code>number</code> | The transaction ID. |
 
-<a name="AsyncIterator<T>"></a>
+<a name="AsyncIterator`<T>`"></a>
 
-## AsyncIterator<T>
+## AsyncIterator`<T>`
 An async iteratable object
 
 **Kind**: global typedef  
