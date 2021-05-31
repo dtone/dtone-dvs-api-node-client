@@ -21,6 +21,10 @@
   ],
   "author": "DT One",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dtone/dtone-dvs-api-node-client.git"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "camelcase-keys": "^6.2.2",

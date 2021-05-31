@@ -55,6 +55,6 @@ try {
 ```
 
 ## API Documentation
-Refer `api.md`.
+See [here][https://github.com/dtone/dtone-dvs-api-node-client/blob/main/api.md]
 
 [apidocs]: https://dvs-api-doc.dtone.com
