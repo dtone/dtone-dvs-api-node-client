@@ -1,7 +1,5 @@
 # dvs-api
 
-[[_TOC_]]
-
 ## Documentation
 The documentation for DVS API can be found [here][apidocs]
 
