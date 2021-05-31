@@ -131,6 +131,8 @@ Create a DVS instance
 
 **Example**  
 ```js
+const {DVS} = require('@dtone/dvs');
+
 const dvsClient = new DVS({
   apiKey: 'your-api-key',
   apiSecret: 'your-api-secret'
