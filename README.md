@@ -55,6 +55,7 @@ try {
 ```
 
 ## API Documentation
-See [here][https://github.com/dtone/dtone-dvs-api-node-client/blob/main/api.md]
+See [here][libdocs]
 
 [apidocs]: https://dvs-api-doc.dtone.com
+[libdocs]: https://github.com/dtone/dtone-dvs-api-node-client/blob/main/api.md
