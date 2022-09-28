@@ -71,10 +71,6 @@ async transactions.</p>
 <dd><p>The Transactions class has all the functions DVS API provides related to
 transactions.</p>
 </dd>
-<dt><a href="#SyncTransaction">SyncTransaction</a></dt>
-<dd><p>The SyncTransaction class has all the functions DVS API provides related to
-sync transactions.</p>
-</dd>
 </dl>
 
 ## Typedefs
@@ -486,7 +482,7 @@ Get a promotion by its ID.
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> | The parameters to provider the API. |
-| [options.operatorId] | <code>number</code> | The promotion ID. |
+| [options.promotionId] | <code>number</code> | The promotion ID. |
 
 <a name="Services"></a>
 
@@ -604,7 +600,6 @@ transactions.
 
 * [Transactions](#Transactions)
     * [.async](#Transactions+async) : [<code>AsyncTransaction</code>](#AsyncTransaction)
-    * [.sync](#Transactions+sync) : [<code>SyncTransaction</code>](#SyncTransaction)
     * [.get(options)](#Transactions+get) ⇒ [<code>AsyncIterator.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
     * [.getByTransactionId(options)](#Transactions+getByTransactionId) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
     * [.cancel(options)](#Transactions+cancel) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
@@ -612,10 +607,6 @@ transactions.
 <a name="Transactions+async"></a>
 
 ### transactions.async : [<code>AsyncTransaction</code>](#AsyncTransaction)
-**Kind**: instance property of [<code>Transactions</code>](#Transactions)  
-<a name="Transactions+sync"></a>
-
-### transactions.sync : [<code>SyncTransaction</code>](#SyncTransaction)
 **Kind**: instance property of [<code>Transactions</code>](#Transactions)  
 <a name="Transactions+get"></a>
 
@@ -650,44 +641,6 @@ Cancel a transaction
 
 **Kind**: instance method of [<code>Transactions</code>](#Transactions)  
 **Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1transactions~1{transaction_id}~1cancel/post  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| options | <code>Object</code> | The parameters to provider the API. |
-| [options.transactionId] | <code>number</code> | The transaction ID. |
-
-<a name="SyncTransaction"></a>
-
-## SyncTransaction
-The SyncTransaction class has all the functions DVS API provides related to
-sync transactions.
-
-**Kind**: global class  
-
-* [SyncTransaction](#SyncTransaction)
-    * [.create(options)](#SyncTransaction+create) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
-    * [.confirm(options)](#SyncTransaction+confirm) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
-
-<a name="SyncTransaction+create"></a>
-
-### syncTransaction.create(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
-Create a transaction synchronously.
-
-**Kind**: instance method of [<code>SyncTransaction</code>](#SyncTransaction)  
-**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions/post  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| options | <code>Object</code> | The parameters to provide the API. |
-| [options.data] | <code>Object</code> | The request body for the API. |
-
-<a name="SyncTransaction+confirm"></a>
-
-### syncTransaction.confirm(options) ⇒ [<code>Promise.&lt;DVSAPIResponse&gt;</code>](#DVSAPIResponse)
-Confirm a transaction synchronously.
-
-**Kind**: instance method of [<code>SyncTransaction</code>](#SyncTransaction)  
-**Link**: https://dvs-api-doc.dtone.com/#tag/Transactions/paths/~1sync~1transactions~1{transaction_id}~1confirm/post  
 
 | Param | Type | Description |
 | --- | --- | --- |

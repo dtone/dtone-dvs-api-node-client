@@ -1,8 +1,9 @@
 {
   "name": "@dtone/dvs",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "DT One DVS SDK for Node.js",
   "main": "lib/dvs.js",
+  "types": "lib/dvs.d.ts",
   "engines": {
     "node": ">=12.0.0"
   },
@@ -40,6 +41,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "jsdoc-to-markdown": "^7.0.1",
     "mocha": "^9.0.1",
-    "nock": "^13.1.0"
+    "nock": "^13.1.0",
+    "typescript": "^4.8.4"
   }
 }
